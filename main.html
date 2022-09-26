@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ming's reponsive-website"> <!--웹사이트 설명-->
-    <meta name="author" content="ming"> <!--누가 만들었는지-->
+    <meta name="author" content="seung"> <!--누가 만들었는지-->
     <link rel="icon" href="/imgs/강아지사진.png">
-    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/5ef77fbbed.js" crossorigin="anonymous"></script>
-    <title>Kming</title>
+    <title>Lseung</title>
     <script src="/main.js" defer></script>
 </head>
 <body>
@@ -17,23 +17,27 @@
     <nav id="navbar">
         <div class="navbar__logo">
             <i class="fa-brands fa-diaspora"></i>
-            <a href="#">Ming</a>
+            <a href="#">seung</a>
         </div>
 
         <ul class="navbar__menu">
-           <li class="navbar__menu__item">Home</li>
-           <li class="navbar__menu__item">About</li>
-           <li class="navbar__menu__item">Skills</li>
-           <li class="navbar__menu__item">My work</li>
-           <li class="navbar__menu__item">Testimonials</li>
-           <li class="navbar__menu__item">Contact</li> 
+           <li class="navbar__menu__item" data-link="#home">Home</li>
+           <li class="navbar__menu__item"data-link="#about">About</li>
+           <li class="navbar__menu__item" data-link="#skills">Skills</li>
+           <li class="navbar__menu__item" data-link="#work">My work</li>
+           <li class="navbar__menu__item" data-link="#testimonials">Testimonials</li>
+           <li class="navbar__menu__item" data-link="#contact">Contact</li> 
         </ul>
-    </nav>
 
+        <button class="navbar__toggle-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+    
     <!-- Home -->
     <section id="home">
         <div class="home__container">
-            <img src="" alt="profile img" class="home__avatar">
+            <img src="/imgs/다운로드.jfif" alt="profile img" class="home__avatar">
             <h1 class="home__title">Hello, <br>I'm Dream Coder</h1>
             <h2 class="home__description">A software Enginner currently residing in Incheon, Korea.</h2>
             <button class="home__contact">Contact Me</button>
@@ -41,7 +45,7 @@
     </section>
 
     <!-- About -->
-    <section id="about">
+    <section id="about" class="section section__container">
         <h1>About me</h1>
         <p>
             Hello, I'm coding while listening to Elly's lecture at dawn. 
@@ -115,7 +119,7 @@
     </section>
 
     <!-- Skills -->
-    <section id="skills"></section>
+    <section id="skills" class="section">
         <div class="section__container">
             <h1>Skills</h1>
             <h2>Skills & Attributes</h2>
@@ -221,8 +225,9 @@
                 </div>
             </div>
         </div>
+    </section>
     <!-- Work -->
-    <section id="work">
+    <section id="work" class="section">
         <div class="section__container">
             <h1>My work</h1>
             <h3>Projects</h3>
@@ -235,7 +240,7 @@
         </div>
 
         <div class="work__projects">
-            <a href="" class="project" target="blank">
+            <a href="#" class="project" target="blank" data-type="front-end">
                 <img src="/imgs/projects/project1.png" alt="Youtube" class="project__img">
                 <div class="project__description">
                     <h3>Youtube Site</h3>
@@ -243,7 +248,7 @@
                 </div>
             </a>
 
-            <a href="" class="project" target="blank">
+            <a href="#" class="project" target="blank" data-type="front-end">
                 <img src="/imgs/projects/project2.png" alt="navbar" class="project__img">
                 <div class="project__description">
                     <h3>Resposive Navbar</h3>
@@ -251,7 +256,7 @@
                 </div>
             </a>
 
-            <a href="" class="project" target="blank">
+            <a href="#" class="project" target="blank" data-type="front-end">
                 <img src="/imgs/projects/project3.png" alt="navbar" class="project__img">
                 <div class="project__description">
                     <h3>Shooping malll game</h3>
@@ -259,7 +264,7 @@
                 </div>
             </a>
 
-            <a href="" class="project" target="blank">
+            <a href="#" class="project" target="blank" data-type="back-end">
                 <img src="/imgs/projects/project4.png" alt="" class="project__img">
                 <div class="project__description">
                     <h3>project</h3>
@@ -267,7 +272,7 @@
                 </div>
             </a>
 
-            <a href="" class="project" target="blank">
+            <a href="#" class="project" target="blank" data-type="back-end">
                 <img src="/imgs/projects/project5.png" alt="" class="project__img">
                 <div class="project__description">
                     <h3>project</h3>
@@ -275,7 +280,7 @@
                 </div>
             </a>
 
-            <a href="" class="project" target="blank">
+            <a href="#" class="project" target="blank" data-type="mobile">
                 <img src="/imgs/projects/project6.png" alt="" class="project__img">
                 <div class="project__description">
                     <h3>project</h3>
@@ -283,7 +288,7 @@
                 </div>
             </a>
 
-            <a href="" class="project" target="blank">
+            <a href="#" class="project" target="blank" data-type="mobile">
                 <img src="/imgs/projects/project7.png" alt="" class="project__img">
                 <div class="project__description">
                     <h3>project</h3>
@@ -291,7 +296,7 @@
                 </div>
             </a>
 
-            <a href="" class="project" target="blank">
+            <a href="#" class="project" target="blank" data-type="mobile">
                 <img src="/imgs/projects/project8.png" alt="" class="project__img">
                 <div class="project__description">
                     <h3>project</h3>
@@ -303,7 +308,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section id="testimonials">
+    <section id="testimonials" class="section">
         <div class="section__container">
             <h1>Testimonials</h1>
             <h3>See what they say about me</h3>
@@ -333,7 +338,7 @@
         </div>
     </section>
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="section">
         <h1 class="conatct__title">Let's talk</h1>
         <h2 class="contact__email">seunghyeok031109@gmail.com</h2>
         <div class="contact__links">
