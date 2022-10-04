@@ -100,7 +100,7 @@
 .navbar__log{
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
-    color: var(--color-white);
+    color: var(--color-withe);
 }
 
 .navbar__menu{
@@ -110,7 +110,7 @@
 .navbar__menu__item{
     padding: 8px 12px;
     margin: 0 4px;
-    color: #73aace;
+    color:#7c7979;
     cursor: pointer;
     border: 1px solid transparent;
 }
