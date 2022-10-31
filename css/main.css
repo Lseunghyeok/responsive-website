@@ -317,6 +317,7 @@ button {
     opacity: 1;
     transition: all var(--animation-duration) ease-out;
 }
+
 .project{
     position: relative;
     background-color: var(--color-light-white);
@@ -338,7 +339,7 @@ button {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: black;
+    background-color: var(--color-black);
     width: 100%;
     height: 100%;
     display: flex;
@@ -349,16 +350,155 @@ button {
     transform: translateY(10px);
 }
 .project:hover .project__description{
-    opacity: 0;
+    opacity: 0.8;
     transform: translateY(0);
 }
-.project__description h3::after{
+.project__description h3:after{
     content:"";
     display: block;
     position: relative;
     width: 25px;
     height: 2px;
     background-color: var(--color-white);
-    left: 50px;
+    left: 50%;
     margin-left: -12px;
+    margin-top: 8px;
+}
+#testimonials{
+    background-color: var(--color-white);
+}
+.testimonial{
+    margin: 40px;
+}
+.testimonial{
+    display: flex;
+    margin: 32px 0px;
+}
+.testimonial__avatar{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+.testimonial__avatar:nth-child(odd){
+    margin-right: 40px;
+}
+.testimonial__avatar:nth-child(even){
+    margin-left: 40px;
+}
+.testimonial__speech-bubble{
+    padding: 18px;
+    background-color: var(--color-white);
+    border-radius: var(--size-border-radius);
+}
+.testimonial__speech-bubble a{
+    color: var(--color-pink);
+}
+.testimonial__speech-bubble p{
+    color: var(--color-black);
+}
+/* contect */
+#contact{
+    background-color: var(--color-pink);
+}
+.contact__title, .contact__email, .contact__rights{
+    color: var(--color-white);
+}
+.contact__title{
+    margin: 32px 0;
+}
+.contact__links{
+    font-size: var(--font-large);
+    margin: 24px 0;
+}
+.contact__links i:hover{
+    transform: scale(1.1);
+    color: #73aace;
+    transition: all var(--animation-duration) ease-in;
+}
+.arrow-up{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    color: var(--color-white);
+    background-color: var(--color-pink);
+    border-radius: 50%;
+    opacity: 0;/*요소의 투명ㄱ도*/
+    transition: opacity 300ms ease-in;/*애니메이션 속도*/
+}
+.navbar__toggle-btn{
+    color: var(--color-white);
+    font-size: var(--font-medium);
+    right: 25px;
+    display: none;
+}
+@media screen and (max-width: 800px){
+    .navbar__toggle-btn{
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+    #navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: var(--color-blue);
+    }
+    .navbar__menu{
+        flex-direction: column;
+        text-align: center;
+        height: 100%;
+        display: none;
+    }
+    .navbar__menu.open{
+        display: block;
+    }
+    .navbar__majors{
+        flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    .major{
+        margin-bottom: 30px;
+    }
+    .testimonial__avatar{
+        width: 120px;
+        height: 120px;
+    }
+    .testimonial{
+        flex-direction: column;
+
+    }
+    .testimonial__avatar:nth-child(even), .testimonial__avatar:nth-child(odd){
+        margin: 0;
+        margin-bottom: 8px;
+    }
+    .testimonial__speech-bubble{
+        order: 1;
+    }
+    .skill{
+        flex-direction: column;
+    }
+    .category__btn{
+        margin: 4px 0;
+        width: 100%;
+    }
+    .project{
+        flex-grow: 1;
+    }
+    .arrow-up{
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        line-height: 50px;
+        right: 16px;
+        bottom: 16px;
+        transform: perspective();
+    }
+    .category__btn{
+        width: 100%;
+        margin: 4px 0;
+    }
 }
