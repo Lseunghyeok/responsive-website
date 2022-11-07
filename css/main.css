@@ -423,10 +423,14 @@ button {
     height: 70px;
     font-size: 50px;
     color: var(--color-white);
-    background-color: var(--color-pink);
+    background-color: var(--color-orange);
     border-radius: 50%;
     opacity: 0;/*요소의 투명ㄱ도*/
     transition: opacity 300ms ease-in;/*애니메이션 속도*/
+}
+.arrow-up.visible {
+    opacity: 1;
+    pointer-events: auto;
 }
 .navbar__toggle-btn{
     color: var(--color-white);
@@ -444,7 +448,7 @@ button {
     #navbar{
         flex-direction: column;
         align-items: flex-start;
-        background-color: var(--color-blue);
+        background-color: var(--color-grey);
     }
     .navbar__menu{
         flex-direction: column;
