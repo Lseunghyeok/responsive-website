@@ -63,20 +63,19 @@ arrowUp.addEventListener("click", () => {
 });
 
 
-function scrollIntoView(selector){
+function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({
         behavior : 'smooth'
     });
 }
 
-// 콘솔에서 실행로그 띄우기
+
 document.addEventListener('scroll', function() {
     var currentScrollValue = document.documentElement.scrollTop;
     console.log('currentScrollValue is' + currentScrollValue);
 });
 
-// work부분 사진 바꿔 띄우기
 const workBtnContainer = document.querySelector(".work__categories");
 const projectContainer = document.querySelector(".work__projects");
 const projects = document.querySelectorAll(".project");
